@@ -1,0 +1,14 @@
+name: Build and run on all OSes
+on: [push]
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    #     runs-on: ${{ matrix.os }}
+
+    #     strategy:
+    #         matrix:
+    #             os: [windows-latest, mac-os-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Go run
+        run: go run .
