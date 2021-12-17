@@ -4,9 +4,9 @@ jobs:
   release:
     runs-on: windows-latest
     # runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [windows-latest, ubuntu-latest]
+    # strategy:
+    #   matrix:
+    #     os: [windows-latest, ubuntu-latest]
     steps:
       - uses: actions/checkout@v2
       - name: Setup Go
@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: go build -v ./...
       - name: Run the binary
-        run: sudo ./my_traceroute -remote "heisse.de"
+        run: three_oses.exe
       # - name: Go run
       #   run: go run .
