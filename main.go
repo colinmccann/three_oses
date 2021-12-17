@@ -2,10 +2,14 @@ package main
 
 import (
 	"fmt"
-	"path/filepath"
+	"strings"
 )
 
+func Join(parts ...string) string {
+	return strings.Join(parts, PathSeparator)
+}
+
 func main() {
-	s := filepath.Join("a", "b", "c")
+	s := Join("a", "b", "c")
 	fmt.Println(s)
 }
