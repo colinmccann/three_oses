@@ -16,6 +16,6 @@ jobs:
       - name: Build
         run: go build -v ./...
       - name: Run the binary
-        run: three_oses
+        run: .\three_oses.exe
       # - name: Go run
       #   run: go run .
